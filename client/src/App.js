@@ -24,7 +24,7 @@ function App() {
         users.length > 0 &&
         users.map((user) => {
           return (
-            <div>
+            <div key={user._id}>
               <h3>
                 {user.name} {user.lastName}
               </h3>
