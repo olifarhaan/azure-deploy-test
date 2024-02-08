@@ -25,7 +25,7 @@ export default function Create() {
     e.preventDefault();
 
     axios
-      .post(`${baseUrl}/create`, user)
+      .post(`${baseUrl}/api/v1/create`, user)
       .then((res) => console.log(res))
       .catch((err) => console.log(err));
   };

@@ -24,13 +24,13 @@ const userSchema = mongoose.Schema({
 //db model
 const User = new mongoose.model("User", userSchema);
 
-app.get("/get-users", (req, res) => {
+app.get("/api/v1/get-users", (req, res) => {
   User.find()
     .then((users) => res.json(users))
     .catch((err) => console.log(err));
 });
 
-app.post("/create", (req, res) => {
+app.post("/api/v1/create", (req, res) => {
   //save to mongodb and send response
   const newUser = new User({
     name: req.body.name,
